@@ -1,7 +1,10 @@
-/* eslint-disable no-unreachable */
 import React, { useState } from 'react';
+
+import './style.css';
+
+import { cn } from '../../Lib/utils.ts';
+
 import { NavLink } from 'react-router-dom';
-import { cn } from '../../lib/utils.ts';
 import {
     BookOpen, Award, Users, Shield, ChevronLeft, ChevronRight,
     ChevronDown, ChevronUp, Briefcase, Calendar, FileText,

@@ -1,12 +1,12 @@
-import React from 'react';
 import './style.css';
+import Layout from '../../Components/Layout/index.tsx';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
-  
   const fadeIn = {
     hidden: {opacity: 0, y: 20},
     visible: {
@@ -34,6 +34,7 @@ const Index = () => {
       ];
 
       return(
+        <Layout>
           <motion.div
           className='motionDiv'
           initial='hidden'
@@ -55,6 +56,8 @@ const Index = () => {
               ))}
             </motion.div>
           </motion.div>
+        </Layout>
+
       );
 };
 

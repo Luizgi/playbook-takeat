@@ -1,5 +1,8 @@
 import React from 'react';
 import Index from './Pages/Home/page.tsx';
+
+
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App()

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import './style.css';
-
 import { cn } from '../../Lib/utils.ts';
 
 import { NavLink } from 'react-router-dom';
@@ -53,35 +52,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       const isExpanded = expandedSections[item.title.toLowerCase()];
 
       return (
+
         <li key={`${item.title}-${index}`} className="nav-item">
-          <button
-          onClick={() => toggleSection(item.title.toLowerCase())}
-          className={cn(
-            "nav-button",
-            !isOpen && "nav-button-collapsed"
-          )}>
+
+          <button onClick={() => toggleSection(item.title.toLowerCase())} className={cn("nav-button", !isOpen && "nav-button-collapsed")}>
             <span className="nav-icon">{item.icon}</span>
+
             {isOpen && (
               <>
                 <span className="nav-title">{item.title}</span>
-                <span className="nav-chevron">
-                  {isExpanded ? <ChevronUp size={16}/>: <ChevronDown size={16}/>}
-                </span>
+                <span className="nav-chevron"> {isExpanded ? <ChevronUp size={16}/>: <ChevronDown size={16}/>} </span>
               </>
             )}
           </button>
 
           {isOpen && isExpanded && (
-            <ul className="nav-submenu">
-              {item.children.map((child, childIndex) => (
+            <ul className="nav-submenu">{item.children.map((child, childIndex) => (
                 <li key={`${child.title}-${childIndex}`} className="nav-subitem">
                   {child.path ? (
-                    <NavLink
-                    to={child.path}
-                    className={({ isActive }) => cn(
-                      "nav-sublink",
-                      isActive ? "nav-sublink-active": "nav-sublink-hover"
-                    )}>
+                    <NavLink to={child.path} className={({ isActive }) => cn("nav-sublink", isActive ? "nav-sublink-active": "nav-sublink-hover")}>
                       <span className="nav-subicon">{child.icon}</span>
                       <span className="nav-subtitle">{child.title}</span>
                     </NavLink>
@@ -90,6 +79,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                       <span className="nav-subicon">{child.icon}</span>
                       <span className="nav-subtitle">{child.title}</span>
                     </div>
+
                   )}
                 </li>
               ))}
@@ -102,50 +92,33 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         if(item.path){
           return(
             <li key={`${item.title}-${index}`}  className="nav-item">
-              <NavLink
-              to= {item.path}
-              className={({ isActive }) => cn(
-                "nav-link",
-                isActive ? "nav-link-active" : "nav-link-hover",
-                !isOpen && "nav-link-collapsed"
-              )}>
+              <NavLink to= {item.path} className={({ isActive }) => cn("nav-link", isActive ? "nav-link-active" : "nav-link-hover", !isOpen && "nav-link-collapsed")}>
                 <span className="nav-icon">{item.icon}</span>
-                <span className={cn(
-                  "nav-title",
-                  isOpen ? "nav-title-visible" : "nav-title-hidden"
-                )}>
-                  {item.title}
-                </span>
+                <span className={cn("nav-title", isOpen ? "nav-title-visible" : "nav-title-hidden")}>{item.title}</span>
               </NavLink>
             </li>
           );
       }
-
       return null;
     };
 
     return(
       <aside className={cn("sidebar", isOpen ? "sidebar-expanded" : "sidebar-collapsed")}>
         <div className="sidebar-container">
+
           <div className="sidebar-header">
-            <h1 className={cn("sidebar-title", isOpen ? "sidebar-title-visible" : "sidebar-title-hidden")}>
-              Startup Handbook
-            </h1>
-            <button
-            onClick={toggleSidebar}
-            className="sidebar-toggle"
-            aria-label={isOpen ? "Close sidebar" : "Open sidebar"}>
-              {isOpen ? <ChevronLeft size={20}/> : <ChevronRight size={20}/>}
-            </button>
+            <h1 className={cn("sidebar-title", isOpen ? "sidebar-title-visible" : "sidebar-title-hidden")}>Takeat Handbook</h1>
+            <button onClick={toggleSidebar} className="sidebar-toggle" aria-label={isOpen ? "Close sidebar" : "Open sidebar"}>{isOpen ? <ChevronLeft size={20}/> : <ChevronRight size={20}/>}</button>
           </div>
+
           <nav className="sidebar-nav">
-            <ul className="sidebar-list">
-              {navItems.map((item, index) => renderNavItem(item, index))}
-            </ul>
+            <ul className="sidebar-list">{navItems.map((item, index) => renderNavItem(item, index))}</ul>
           </nav>
+
           <div className={cn("sidebar-footer", isOpen ? "sidebar-footer-visible" : "sidebar-footer-hidden")}>
-            <p className="sidebar-footer-text">© {new Date().getFullYear()} Startup Inc.</p>
+            <p className="sidebar-footer-text">© {new Date().getFullYear()} Takeat Inc.</p>
           </div>
+
         </div>
       </aside>
     );

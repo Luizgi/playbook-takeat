@@ -45,49 +45,6 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
-.playbookBlock {
-  background-color: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.375rem;
-  padding: 1.5rem;
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-.playbookBlock:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
-}
-
-.playbookTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.playbookDesc {
-  color: #718096;
-  font-size: 0.875rem;
-  margin-bottom: 1.5rem;
-}
-
-.playbookPage {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #2b6cb0;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  transition: color 0.2s ease-in-out;
-}
-
-.playbookPage:hover {
-  color: #2c5282;
-}
-
-.arrowLink {
-  margin-left: 0.5rem;
-}
-
 .playbookTitleReference {
   margin-bottom: 1.5rem; 
   font-size: 1.5rem;

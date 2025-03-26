@@ -45,8 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   const navItems: NavItem[] = [
     { title: 'Home', path: '/', icon: <Home size={20}/>, children: [] },
-    { title: 'Sobre', icon: <Info size={20}/>, 
-    children: [
+    { title: 'Sobre', icon: <Info size={20}/>, children: [
       { title: 'Nosso Produto',  path: '/', icon: <Star size={18} />}, 
       { title: 'Nossa História', path: '/', icon: <History size={18} />},
       { title: 'Nossa Cultura',  path: '/', icon: <Lightbulb size={18}/>},
@@ -56,85 +55,77 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       { title: 'Estratégia 2025', path: '/', icon: <LineChart size={18}/>},
       { title: 'Quadro de Organização', path: '/', icon: < Network/>}
     ]
-  },
-  { title: 'Para você', path: '/', icon: <User size={20}/>, children: []},
-  {
-    title: 'Benefícios', icon: <Award size={20}/>,
-    children: [
-      { title: 'Vale Refeição', path: '/', icon: <Coffee size={18}/>},
+    },
+    { title: 'Para você', path: '/', icon: <User size={20}/>, children: []},
+    { title: 'Benefícios', icon: <Award size={20}/>, children: [
+        { title: 'Vale Refeição', path: '/', icon: <Coffee size={18}/>},
+      ]
+    },
+    { title: 'Para seu Trabalho', icon: <Briefcase size={20}/>, children: [
+      { title: 'Trilhas', path: '/', icon: <BookOpen size={18}/>},
+      { title: 'Tom de Voz', path: '/', icon: <Headphones size={18}/>},
+      { title: 'Compras', path: '/', icon: <ShoppingCart size={18}/>},
+      { title: 'Salas', path: '/', icon: <DoorOpen size={18}/>},
+      { title: 'Escritório e Regras', path: '/', icon: <FileImage size={18}/>},
+      { title: 'Calendário e Eventos', path: '/', icon: <Calendar size={18}/>},
+      { title: 'Políticas', path: '/', icon: <Shield size={18}/>},
+      { title: 'Suporte de Equipamentos', path: '/', icon: <HardDrive size={18}/>},
+      { title: 'Portal de Líderes', path: '/', icon: <Crown size={18}/>}, 
     ]
-  },
-  { title: 'Para seu Trabalho', icon: <Briefcase size={20}/>,
-  children: [
-    { title: 'Trilhas', path: '/', icon: <BookOpen size={18}/>},
-    { title: 'Tom de Voz', path: '/', icon: <Headphones size={18}/>},
-    { title: 'Compras', path: '/', icon: <ShoppingCart size={18}/>},
-    { title: 'Salas', path: '/', icon: <DoorOpen size={18}/>},
-    { title: 'Escritório e Regras', path: '/', icon: <FileImage size={18}/>},
-    { title: 'Calendário e Eventos', path: '/', icon: <Calendar size={18}/>},
-    { title: 'Políticas', path: '/', icon: <Shield size={18}/>},
-    { title: 'Suporte de Equipamentos', path: '/', icon: <HardDrive size={18}/>},
-    { title: 'Portal de Líderes', path: '/', icon: <Crown size={18}/>}, 
-  ]
-},
-{ title: 'Membros', path:'/', icon: <Users size={20}/>}
-  ];
+    },
+    { title: 'Membros', path:'/', icon: <Users size={20}/>, children: []}
+    ];
 
   const renderNavItem = (item: NavItem, index: number) => {
-    if(item.children && item.children.length > 0)
-    {
-      const isExpanded = expandedSections[item.title.toLowerCase()];
+    const isExpanded = expandedSections[item.title.toLowerCase()];
 
-      return (
+    return (
+      <li key={`${item.title}-${index}`} className="nav-item">
+        <button
+          onClick={() => item.children && toggleSection(item.title.toLowerCase())}
+          className={cn("nav-button", !isOpen && "nav-button-collapsed")}
+        >
+          <span className="nav-icon">{item.icon}</span>
 
-        <li key={`${item.title}-${index}`} className="nav-item">
-
-          <button onClick={() => toggleSection(item.title.toLowerCase())} className={cn("nav-button", !isOpen && "nav-button-collapsed")}>
-            <span className="nav-icon">{item.icon}</span>
-
-            {isOpen && (
-              <>
-                <span className="nav-title">{item.title}</span>
-                <span className="nav-chevron"> {isExpanded ? <ChevronUp size={16}/>: <ChevronDown size={16}/>} </span>
-              </>
-            )}
-          </button>
-
-          {isOpen && isExpanded && (
-            <ul className="nav-submenu">{item.children.map((child, childIndex) => (
-                <li key={`${child.title}-${childIndex}`}>
-                  {child.path ? (
-                    <NavLink to={child.path} className={({ isActive }) => cn("nav-sublink", isActive ? "nav-sublink-active": "nav-sublink-hover")}>
-                      <span className="nav-icon">{child.icon}</span>
-                      <span className="nav-subtitle">{child.title}</span>
-                    </NavLink>
-                  ) : (
-                    <div className="nav-sublink-static">
-                      <span className="nav-icon">{child.icon}</span>
-                      <span className="nav-icon">{child.title}</span>
-                    </div>
-
-                  )}
-                </li>
-              ))}
-            </ul>
+          {isOpen && (
+            <>
+              <span className="nav-title">{item.title}</span>
+              {item.children && (
+                <span className="nav-chevron">
+                  {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </span>
+              )}
+            </>
           )}
-        </li>
-      );
-    }
+        </button>
 
-        if(item.path){
-          return(
-            <li key={`${item.title}-${index}`} className="nav-item">
-              <NavLink to= {item.path} className={({ isActive }) => cn("nav-link", isActive ? "nav-link-active" : "nav-link-hover", !isOpen && "nav-link-collapsed")}>
-                <span className="nav-icon">{item.icon}</span>
-                <span className={cn("nav-title", isOpen ? "nav-title-visible" : "nav-title-hidden")}>{item.title}</span>
-              </NavLink>
-            </li>
-          );
-      }
-      return null;
-    };
+        {isOpen && isExpanded && item.children && (
+          <ul className="nav-submenu">
+            {item.children.map((child, childIndex) => (
+              <li key={`${child.title}-${childIndex}`}>
+                {child.path ? (
+                  <NavLink
+                    to={child.path}
+                    className={({ isActive }) =>
+                      cn("nav-sublink", isActive ? "nav-sublink-active" : "nav-sublink-hover")
+                    }
+                  >
+                    <span className="nav-icon">{child.icon}</span>
+                    <span className="nav-subtitle">{child.title}</span>
+                  </NavLink>
+                ) : (
+                  <div className="nav-sublink-static">
+                    <span className="nav-icon">{child.icon}</span>
+                    <span className="nav-subtitle">{child.title}</span>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    );
+  };
 
     return(
       <aside className={cn("sidebar", isOpen ? "sidebar-expanded" : "sidebar-collapsed")}>

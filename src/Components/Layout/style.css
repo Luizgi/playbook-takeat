@@ -1,15 +1,17 @@
 
 .layout-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     min-height: 100vh;
     background-color: white;
+    position: relative;
   }
   
-
   .layout-main {
     flex: 1;
     transition: margin-left 0.3s ease-in-out;
     background-color: white;
+    padding-left: 64px;
   }
   
   .layout-main.expanded {
@@ -17,9 +19,20 @@
   }
   
   .layout-main.collapsed {
-    margin-left: 64px;
+    margin-left: 256px;
   }
   
+  .layout-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 256px;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
 
   .layout-header {
     position: sticky;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 
 import './style.css';
-import Sidebar  from '../Sidebar/index.tsx';
+import Sidebar  from '../Sidebar/component.tsx';
 
 interface LayoutProps {
     children: React.ReactNode;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './style.css';
-import Layout from '../../Components/Layout/index.tsx';
+import Layout from '../../Components/Layout/component.tsx';
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -26,25 +26,45 @@ const Index = () => {
 
       return(
         <Layout>
+          <div className="pageDiv">
           <motion.div className='motionDiv' initial='hidden' animate='visible' variants={fadeIn}>
 
+            <span className="pageTitle"> Takeat Playbook </span>
             <h1 className="mainText"> Bem vindo ao Playbook da Takeat</h1>
             <p className="subText"> Um guia para nossos processos, principios e políticas.</p>
 
-            <motion.div className="playbookGrid" variants={stagger}>
+            <motion.div className="playbookAbout" variants={stagger}>
 
+            <motion.div variants={fadeIn}>
+              <h2 className="playbookTitleReference"> Playbooks </h2>
+              <div className="playbookContainer">
               {playbooks.map((playbook, index) => (
                   <motion.div key={index} className="playbookBlock" variants={fadeIn}>
 
                     <h3 className="playbookTitle">{playbook.title}</h3>
                     <p className="playbookDesc">{playbook.description}</p>
                     <Link to={playbook.path} className="playbookPage">Ler mais<ArrowRight size={16} className='arrowLink'/></Link>
-
                   </motion.div>
               ))}
+              </div>
+              </motion.div>
+
+              <motion.div variants={fadeIn} className="footerBlock">
+
+                <hr className="footer"/>
+                <h2 className="footerTitle"> Começando: </h2>
+                <p className="footerAsk"> Novo na companhia? Tente começar explorando essas seções: </p>
+
+                <div className="footerLinks">
+                  <Link to='/' className="footerLink"> Overview dos Benefícios </Link>
+                  <Link to='/' className="footerLink"> Políticas </Link>
+                  <Link to='/' className="footerLink"> Sobre Equipes </Link>
+                </div>
+              </motion.div>
 
             </motion.div>
           </motion.div>
+          </div>
         </Layout>
       );
 };

@@ -1,9 +1,29 @@
+.pageDiv {
+  max-width: 56rem;
+}
+
+.pageTitle {
+    display: inline-block; 
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem; 
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; 
+    margin-bottom: 1rem; 
+    border-radius: 9999px; 
+    font-size: 0.75rem;
+    line-height: 1rem; 
+    font-weight: 500; 
+    color: #1F2937; 
+    background-color: #F3F4F6; 
+}
+
 .motionDiv {
   max-width: 896px;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
   text-align: center;
+  flex: 1;
 }
 
 .mainText {
@@ -66,4 +86,67 @@
 
 .arrowLink {
   margin-left: 0.5rem;
+}
+
+.playbookTitleReference {
+  margin-bottom: 1.5rem; 
+  font-size: 1.5rem;
+  line-height: 2rem; 
+  font-weight: 600; 
+}
+
+.playbookAbout {
+  display: grid; 
+  gap: 2rem;
+}
+
+.playbookContainer {
+  display: grid; 
+  gap: 1rem; 
+
+  @media (min-width: 640px) { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+}
+
+.footerBlock {
+  margin-top: 2rem; 
+}
+
+.footer {
+  margin-bottom: 2rem; 
+  border-color: #E5E7EB; 
+}
+
+.footerTitle {
+  margin-bottom: 1rem; 
+  font-size: 1.25rem;
+  line-height: 1.75rem; 
+  font-weight: 600; 
+}
+
+.footerAsk {
+  margin-bottom: 1.5rem; 
+  color: #4B5563; 
+}
+
+.footerLinks {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 0.75rem; 
+}
+
+.footerLink {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; 
+  padding-left: 1rem;
+  padding-right: 1rem; 
+  border-radius: 9999px; 
+  font-size: 0.875rem;
+  line-height: 1.25rem; 
+  font-weight: 500; 
+  background-color: #F3F4F6; 
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms; 
 }

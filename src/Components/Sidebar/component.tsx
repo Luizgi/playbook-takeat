@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './style.css';
 import { cn } from '../../lib/utils.ts';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line
 import {
@@ -29,11 +29,13 @@ interface NavItem {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
+  const navigate = useNavigate();
+
   const [expandedSections, setExpandedSections] = useState<{[key: string]: boolean}>({
-    company: false,
-    personal: false,
-    benefits: true,
-    work: false
+    'company': false,
+    'personal': false,
+    'benefits': false,
+    'work': false
   });
 
   const toggleSection = (section: string) => {
@@ -44,7 +46,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   };
 
   const navItems: NavItem[] = [
-    { title: 'Home', path: '/Home', icon: <Home size={20}/>},
+    { title: 'Home', path: '/', icon: <Home size={20}/>},
     { title: 'Para você', path: '/', icon: <User size={20}/>},
     { title: 'Membros', path:'/', icon: <Users size={20}/>},
     { title: 'Sobre', icon: <Info size={20}/>, children: [
@@ -79,13 +81,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const renderNavItem = (item: NavItem, index: number) => {
     const isExpanded = expandedSections[item.title.toLowerCase()];
 
+    if (!item.children) {
+      const handleGoToPath = () => navigate(item.path || '/');
+
+      return (
+        <li key={`${item.title}-${index}`} className="nav-item">
+          <button
+            onClick={handleGoToPath}
+            className={cn("nav-button", !isOpen && "nav-button-collapsed")}
+          >
+            <span className="nav-icon">{item.icon}</span>
+            {isOpen && <span className="nav-title">{item.title}</span>}
+          </button>
+        </li>
+      );
+    }
+
     return (
       <li key={`${item.title}-${index}`} className="nav-item">
         <button
           onClick={() => item.children && toggleSection(item.title.toLowerCase())}
-          className={cn("nav-button", !isOpen && "nav-button-collapsed")}>
+          className={cn("nav-button", !isOpen && "nav-button-collapsed")}
+        >
           <span className="nav-icon">{item.icon}</span>
-          
+
           {isOpen && (
             <>
               <span className="nav-title">{item.title}</span>

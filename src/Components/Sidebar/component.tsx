@@ -46,7 +46,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const navItems: NavItem[] = [
     { title: 'Home', path: '/', icon: <Home size={20}/>, children: [] },
     { title: 'Sobre', icon: <Info size={20}/>, children: [
-      { title: 'Nosso Produto',  path: '/', icon: <Star size={18} />}, 
+      { title: 'Nosso Produto',  path: '/about/ourProduct', icon: <Star size={18} />}, 
       { title: 'Nossa História', path: '/', icon: <History size={18} />},
       { title: 'Nossa Cultura',  path: '/', icon: <Lightbulb size={18}/>},
       { title: 'Parceiros',      path: '/', icon: <Landmark size={18}/>},

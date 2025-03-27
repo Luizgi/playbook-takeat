@@ -1,0 +1,138 @@
+.motionDiv {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pageTitle {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f3f4f6;
+    color: #374151;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.pageSubtitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 24px;
+}
+
+.contentDiv {
+    margin-bottom: 20px;
+}
+
+.pageDesc {
+    font-size: 18px;
+    color: #4b5563;
+}
+
+.conteinerMotionDiv {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px; 
+    margin-bottom: 16px;
+    justify-content: center; 
+    align-items: start; 
+}
+
+.subConteinerMotionDiv {
+    background-color: white;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subConteinerMotionDiv:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.subConteinerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.iconDiv {
+    background-color: #dbeafe;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.icon {
+    color: #2563eb;
+    width: 24px;
+    height: 24px;
+}
+
+.iconText {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.iconSubtitle {
+    color: #4b5563;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.footerTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.footerMotionDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.footerSubMotionDiv {
+    background-color: white;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footerSubMotionDiv:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footerDiv {
+    color: #f59e0b;
+    margin-bottom: 8px;
+}
+
+.iconFooter {
+    width: 32px;
+    height: 32px;
+}
+
+.footerSubtitle {
+    color: #6b7280;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

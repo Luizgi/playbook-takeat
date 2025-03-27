@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/playbook-takeat/static/css/main.6738f0b6.css",
-    "main.js": "/playbook-takeat/static/js/main.74a53a0f.js",
-    "static/media/logo.png": "/playbook-takeat/static/media/logo.d5e713524d56aa2165af.png",
-    "index.html": "/playbook-takeat/index.html",
-    "main.6738f0b6.css.map": "/playbook-takeat/static/css/main.6738f0b6.css.map",
-    "main.74a53a0f.js.map": "/playbook-takeat/static/js/main.74a53a0f.js.map"
+    "main.css": "/static/css/main.6738f0b6.css",
+    "main.js": "/static/js/main.b6cb5feb.js",
+    "static/media/logo.png": "/static/media/logo.d5e713524d56aa2165af.png",
+    "index.html": "/index.html",
+    "main.6738f0b6.css.map": "/static/css/main.6738f0b6.css.map",
+    "main.b6cb5feb.js.map": "/static/js/main.b6cb5feb.js.map"
   },
   "entrypoints": [
     "static/css/main.6738f0b6.css",
-    "static/js/main.74a53a0f.js"
+    "static/js/main.b6cb5feb.js"
   ]
 }

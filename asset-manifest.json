@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/playbook-takeat/static/css/main.6738f0b6.css",
+    "main.js": "/playbook-takeat/static/js/main.ab3cbd3a.js",
+    "static/media/logo.png": "/playbook-takeat/static/media/logo.d5e713524d56aa2165af.png",
+    "index.html": "/playbook-takeat/index.html",
+    "main.6738f0b6.css.map": "/playbook-takeat/static/css/main.6738f0b6.css.map",
+    "main.ab3cbd3a.js.map": "/playbook-takeat/static/js/main.ab3cbd3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6738f0b6.css",
+    "static/js/main.ab3cbd3a.js"
+  ]
+}

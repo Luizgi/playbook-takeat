@@ -1,0 +1,122 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb;
+    color: #374151;
+  }
+  
+  .motionDiv {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .mainTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3b82f6;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pageDesc {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+  
+  .descBorder {
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+  }
+  
+  .timelineItems {
+    position: relative;
+    border-left: 3px solid #93c5fd;
+    padding-left: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .timelineItem {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .timelineIcon {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    background-color: #e0f2fe;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timelineYear {
+    font-weight: bold;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timelineTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+  
+  .timelineSubtitle {
+    font-size: 1rem;
+    color: #6b7280;
+  }
+  
+  .footerDiv, .footerEndpage {
+    background-color: #eff6ff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+  }
+  
+  .footerTitle, .footerEndpageTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 1rem;
+  }
+  
+  .footerDesc, .footerDescEnd {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+  
+  .footerEndpageIcon {
+    display: block;
+    margin: 0 auto 1rem;
+    color: #3b82f6;
+  }
+  
+  @media (max-width: 768px) {
+    .motionDiv {
+      padding: 1rem;
+    }
+  
+    .mainTitle {
+      font-size: 2rem;
+    }
+  
+    .timelineItems {
+      padding-left: 1rem;
+    }
+  
+    .timelineItem {
+      padding-left: 0;
+    }
+  
+    .timelineIcon {
+      left: -1.5rem;
+    }
+  }
+  

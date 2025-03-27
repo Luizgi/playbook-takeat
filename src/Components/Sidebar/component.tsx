@@ -44,10 +44,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   };
 
   const navItems: NavItem[] = [
-    { title: 'Home', path: '/', icon: <Home size={20}/>, children: [] },
+    { title: 'Home', path: '/Home', icon: <Home size={20}/>},
+    { title: 'Para você', path: '/', icon: <User size={20}/>},
+    { title: 'Membros', path:'/', icon: <Users size={20}/>},
     { title: 'Sobre', icon: <Info size={20}/>, children: [
       { title: 'Nosso Produto',  path: '/about/ourProduct', icon: <Star size={18} />}, 
-      { title: 'Nossa História', path: '/', icon: <History size={18} />},
+      { title: 'Nossa História', path: '/about/ourHistory', icon: <History size={18} />},
       { title: 'Nossa Cultura',  path: '/', icon: <Lightbulb size={18}/>},
       { title: 'Parceiros',      path: '/', icon: <Landmark size={18}/>},
       { title: 'Dicionario da Empresa', path: '/', icon: <BookText size={18}/>},
@@ -56,7 +58,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       { title: 'Quadro de Organização', path: '/', icon: < Network/>}
     ]
     },
-    { title: 'Para você', path: '/', icon: <User size={20}/>, children: []},
     { title: 'Benefícios', icon: <Award size={20}/>, children: [
         { title: 'Vale Refeição', path: '/', icon: <Coffee size={18}/>},
       ]
@@ -73,7 +74,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       { title: 'Portal de Líderes', path: '/', icon: <Crown size={18}/>}, 
     ]
     },
-    { title: 'Membros', path:'/', icon: <Users size={20}/>, children: []}
     ];
 
   const renderNavItem = (item: NavItem, index: number) => {
@@ -83,10 +83,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       <li key={`${item.title}-${index}`} className="nav-item">
         <button
           onClick={() => item.children && toggleSection(item.title.toLowerCase())}
-          className={cn("nav-button", !isOpen && "nav-button-collapsed")}
-        >
+          className={cn("nav-button", !isOpen && "nav-button-collapsed")}>
           <span className="nav-icon">{item.icon}</span>
-
+          
           {isOpen && (
             <>
               <span className="nav-title">{item.title}</span>

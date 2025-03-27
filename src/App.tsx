@@ -13,7 +13,7 @@ function App()
   return(
     <BrowserRouter>
       <Routes>
-          <Route path='/Home' element={<Index/>}/>
+          <Route path='/' element={<Index/>}/>
           <Route path='/about/ourProduct' element={<OurProduct/>} />
           <Route path='/about/ourHistory' element={<OurHistory/>} />
       </Routes>

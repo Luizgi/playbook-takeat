@@ -9,7 +9,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import {
     BookOpen, Award, Users, Shield, ChevronLeft, ChevronRight,
     ChevronDown, ChevronUp, Briefcase, Calendar,
-    Home, Info, ShoppingCart, User, Headphones,
+    Home, Info, ShoppingCart, Headphones,
     Coffee, Star,
     Landmark, History,  Lightbulb, BookText, Palette,
     LineChart, Network,  FileImage, HardDrive, Crown,
@@ -47,12 +47,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   const navItems: NavItem[] = [
     { title: 'Home', path: '/', icon: <Home size={20}/>},
-    { title: 'Para você', path: '/', icon: <User size={20}/>},
     { title: 'Membros', path:'/', icon: <Users size={20}/>},
     { title: 'Sobre', icon: <Info size={20}/>, children: [
       { title: 'Nosso Produto',  path: '/about/ourProduct', icon: <Star size={18} />}, 
       { title: 'Nossa História', path: '/about/ourHistory', icon: <History size={18} />},
-      { title: 'Nossa Cultura',  path: '/', icon: <Lightbulb size={18}/>},
+      { title: 'Nossa Cultura',  path: '/about/ourCulture', icon: <Lightbulb size={18}/>},
       { title: 'Parceiros',      path: '/', icon: <Landmark size={18}/>},
       { title: 'Dicionario da Empresa', path: '/', icon: <BookText size={18}/>},
       { title: 'Nossos Valores', path: '/', icon: <Palette size={18}/>},

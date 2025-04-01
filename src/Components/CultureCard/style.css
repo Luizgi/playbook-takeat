@@ -12,6 +12,13 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.culture-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
 .culture-card-header {
     display: flex;
     align-items: center;

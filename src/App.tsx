@@ -6,8 +6,10 @@ import OurHistory from './Pages/About/OurHistory/page.tsx';
 import OurCulture from './Pages/About/OurCulture/page.tsx';
 import OurPartners from './Pages/About/Partners/page.tsx';
 import Dictionary from './Pages/About/CompanyDict/page.tsx';
+import Strategies from './Pages/About/Strategies/page.tsx';
 
 import { HashRouter, Route, Routes } from 'react-router-dom';
+
 
 
 function App()
@@ -20,7 +22,8 @@ function App()
           <Route path='/about/ourHistory' element={<OurHistory/>} />
           <Route path='/about/ourCulture' element={<OurCulture/>} />
           <Route path='/about/partners'   element={<OurPartners/>} />
-          <Route path='/about/dictionary' element={<Dictionary/>}/>
+          <Route path='/about/dictionary' element={<Dictionary/>} />
+          <Route path='/about/strategies' element={<Strategies/>} />
       </Routes>
     </HashRouter>
   );

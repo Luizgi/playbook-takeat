@@ -11,7 +11,7 @@ import {
     ChevronDown, ChevronUp, Briefcase, Calendar,
     Home, Info, ShoppingCart, Headphones,
     Coffee, Star,
-    Landmark, History,  Lightbulb, BookText, Palette,
+    Landmark, History,  Lightbulb, BookText, 
     LineChart, Network,  FileImage, HardDrive, Crown,
     DoorOpen
   } from 'lucide-react';
@@ -54,8 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       { title: 'Nossa Cultura',  path: '/about/ourCulture', icon: <Lightbulb size={18}/>},
       { title: 'Parceiros',      path: '/about/partners', icon: <Landmark size={18}/>},
       { title: 'Dicionario da Empresa', path: '/about/dictionary', icon: <BookText size={18}/>},
-      { title: 'Nossos Valores', path: '/', icon: <Palette size={18}/>},
-      { title: 'Estratégia 2025', path: '/', icon: <LineChart size={18}/>},
+      { title: 'Estratégia 2025', path: '/about/strategies', icon: <LineChart size={18}/>},
       { title: 'Quadro de Organização', path: '/', icon: < Network/>}
     ]
     },

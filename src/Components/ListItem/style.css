@@ -1,0 +1,19 @@
+.listItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  
+  .listItemIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: #e0f2fe;
+    color: #0284c7;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }

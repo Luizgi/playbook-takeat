@@ -1,0 +1,62 @@
+.culture-container {
+    max-width: 4x1;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.culture-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f1f5f9;
+    color: #4b5563;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    margin-bottom: 16px;
+}
+
+.culture-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 24px;
+}
+
+.culture-description {
+    font-size: 1.125rem;
+    color: #374151;
+    margin-bottom: 40px;
+}
+
+
+.culture-values {
+    display: grid;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.culture-values .culture-card {
+    display: flex;
+    align-items: start;
+}
+
+.culture-experience{
+    background-color: #eff6ff;
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid #dbeafe;
+    margin-bottom: 48px;
+}
+
+.culture-experience h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 24;
+}
+
+.culture-experience p{
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 16px;
+}

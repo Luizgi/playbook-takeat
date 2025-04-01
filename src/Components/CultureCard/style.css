@@ -1,0 +1,26 @@
+.culture-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.culture-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.culture-icon {
+    width: 32px;
+    height: 32px;
+    color: #3b82f6;
+    margin-right: 12px;
+}

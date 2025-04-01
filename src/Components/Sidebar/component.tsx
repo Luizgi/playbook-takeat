@@ -53,7 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       { title: 'Nossa História', path: '/about/ourHistory', icon: <History size={18} />},
       { title: 'Nossa Cultura',  path: '/about/ourCulture', icon: <Lightbulb size={18}/>},
       { title: 'Parceiros',      path: '/about/partners', icon: <Landmark size={18}/>},
-      { title: 'Dicionario da Empresa', path: '/', icon: <BookText size={18}/>},
+      { title: 'Dicionario da Empresa', path: '/about/dictionary', icon: <BookText size={18}/>},
       { title: 'Nossos Valores', path: '/', icon: <Palette size={18}/>},
       { title: 'Estratégia 2025', path: '/', icon: <LineChart size={18}/>},
       { title: 'Quadro de Organização', path: '/', icon: < Network/>}

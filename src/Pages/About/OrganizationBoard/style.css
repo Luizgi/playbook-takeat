@@ -1,0 +1,169 @@
+.org-chart-container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+  .org-chart-tagline {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  
+  .org-chart-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .org-chart-description p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  
+  .ceo-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .ceo-card {
+    background-color: #eff6ff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #bfdbfe;
+    text-align: center;
+    width: 16rem;
+  }
+  
+  .ceo-icon {
+    background-color: #ffffff;
+    border-radius: 9999px;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .executive-team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .executive-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .executive-card.purple {
+    background-color: #f3e8ff;
+    border: 1px solid #e9d5ff;
+  }
+  
+  .executive-card.green {
+    background-color: #ecfdf5;
+    border: 1px solid #d1fae5;
+  }
+  
+  .executive-card.red {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+  }
+  
+  .department-section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .department-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .department-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .department-teams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .team-card {
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #f3f4f6;
+  }
+  
+  .team-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .team-icon {
+    margin-right: 0.25rem;
+  }
+
+  .org-chart-growth {
+    background-color: #eff6ff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #bfdbfe;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .org-chart-growth h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .org-chart-growth p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+  
+  .growth-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+  }
+  
+  .growth-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .growth-link:hover {
+    background-color: #2563eb;
+  }

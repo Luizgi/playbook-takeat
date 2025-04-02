@@ -16,51 +16,38 @@ const Strategies = () => {
 
   return (
     <Layout>
-      <motion.div
-        className="container"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-      >
-        <span className="tag">Company Strategy</span>
-        <h1 className="title">2024 Strategy</h1>
+      <motion.div className="container" initial="hidden" animate="visible" variants={fadeIn}>
+        <span className="tag">Estrátegia da Companhia</span>
+        <h1 className="title">Estrátegia 2025</h1>
 
         <div className="section">
-          <p className="paragraph">
-            This document outlines Takeat's strategic priorities and objectives for 2024, focusing on growth, 
-            customer experience, operational efficiency, and team development.
-          </p>
+          <p className="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, corrupti tempora culpa atque quae nulla cum facere dicta adipisci pariatur voluptatibus reprehenderit commodi fugit rem illum voluptates eius possimus numquam.</p>
           <div className="confidentialBox">
-            <p className="confidentialTitle">Confidential Information</p>
-            <p className="confidentialText">
-              This document contains confidential business information. Please do not share outside the company.
-            </p>
+            <p className="confidentialTitle">Informação Confidencial</p>
+            <p className="confidentialText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit cumque, debitis ipsum facilis molestias laboriosam quam temporibus aspernatur id dolores alias adipisci commodi corporis quibusdam! At dolorem error inventore consequatur!</p>
           </div>
         </div>
 
         <div className="section">
           <div className="iconWrapper">
             <Target className="icon" />
-            <h2 className="subtitle">Our Vision for 2024</h2>
+            <h2 className="subtitle">Nossa Visão de 2025</h2>
           </div>
-          <p className="paragraph">
-            By the end of 2024, Takeat aims to be the market leader in food delivery across our operating regions, 
-            while maintaining profitability and scaling our infrastructure to support future growth.
-          </p>
+          <p className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, necessitatibus unde ullam distinctio fugiat minus atque, voluptas, amet earum illo ex dolor. Harum minus architecto nulla quis aliquam error praesentium.</p>
 
-          <Card title="Key Strategic Targets">
+          <Card title="Estrátegias Chave">
             <ul className="list">
               <ListItem
                 icon={<TrendingUp />}
-                text="Increase total revenue by 35% compared to 2023, through customer acquisition and increased order frequency."
-              />
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+/>
               <ListItem
                 icon={<Users />}
-                text="Grow our active customer base by 25% while improving retention rates by 15%."
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit"
               />
               <ListItem
                 icon={<Globe />}
-                text="Launch in 10 new cities across 2 new countries, establishing strong initial market share."
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit"
               />
             </ul>
           </Card>

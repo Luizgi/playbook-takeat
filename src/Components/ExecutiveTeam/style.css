@@ -1,0 +1,27 @@
+.executive-team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .executive-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .executive-card.purple {
+    background-color: #f3e8ff;
+    border: 1px solid #e9d5ff;
+  }
+  
+  .executive-card.green {
+    background-color: #ecfdf5;
+    border: 1px solid #d1fae5;
+  }
+  
+  .executive-card.red {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+  }

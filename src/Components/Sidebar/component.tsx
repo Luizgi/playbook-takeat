@@ -32,10 +32,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const navigate = useNavigate();
 
   const [expandedSections, setExpandedSections] = useState<{[key: string]: boolean}>({
-    'company': false,
-    'personal': false,
-    'benefits': false,
-    'work': false
+    'sobre': false,
+    'benefícios': false,
+    'para seu trabalho': false
   });
 
   const toggleSection = (section: string) => {
@@ -82,7 +81,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
     if (!item.children) {
       const handleGoToPath = () => navigate(item.path || '/');
 
-      return (
+    return (
         <li key={`${item.title}-${index}`} className="nav-item">
           <button
             onClick={handleGoToPath}
@@ -92,8 +91,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
             {isOpen && <span className="nav-title">{item.title}</span>}
           </button>
         </li>
-      );
-    }
+    );
+  };
 
     return (
       <li key={`${item.title}-${index}`} className="nav-item">
